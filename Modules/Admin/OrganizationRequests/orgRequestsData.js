@@ -1,4 +1,4 @@
-export const organizationsRequestsData = [
+export const orgRequestsData = [
     {
       organizationName: "El Gouna Hospital",
       organizationType: "Hospital",
@@ -7,7 +7,7 @@ export const organizationsRequestsData = [
       Area: "El Gouna",
       Government: "Red Sea",
       Location: "27.3964, 33.6551",
-      Document: "el_gouna_hospital_registration.pdf",
+      Status:"none"
     },
     {
       organizationName: "Cairo Public Library",
@@ -17,7 +17,7 @@ export const organizationsRequestsData = [
       Area: "Downtown Cairo",
       Government: "Cairo",
       Location: "30.0444, 31.2357",
-      Document: "cairo_public_library_license.pdf",
+      Status:"none"
     },
     {
       organizationName: "Egyptian Red Crescent Society",
@@ -27,7 +27,7 @@ export const organizationsRequestsData = [
       Area: "Heliopolis",
       Government: "Cairo",
       Location: "30.076, 31.2866",
-      Document: "egyptian_red_crescent_society_registration.docx",
+      Status:"none"
     },
   ];
   

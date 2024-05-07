@@ -1,4 +1,3 @@
-console.log("ttt");
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -12,14 +11,14 @@ class Header extends HTMLElement {
         />
         <div class="navBarContainer navBarContainer2">
           <div class="buttonsDiv">
-            <button class="navBarButton">
+            <button onClick="registeredOrg()" class="navBarButton">
             <div class="boldText">Registered Organizations</div>
             </button>
-            <button onClick="changePass"  class="navBarButton">
+            <button onClick="changePass()"  class="navBarButton">
             <div class="boldText">Change Password</div>
             </button>
           </div>
-            <button onCLick= "logOutIcon" class="iconButton">
+            <button onCLick= "logOutIcon()" class="iconButton">
               <img
                 src="../../../Assets/Icons/logout.png"
                 alt="logOutIcon"
@@ -33,11 +32,19 @@ class Header extends HTMLElement {
 
       `;
   }
-
-  
 }
 customElements.define("main-header", Header);
 
+function logOutIcon() {
+  window.location.href = "../../../index.html";
+  localStorage.clear();
+}
 
+function changePass() {
+  window.location.href = "../PasswordManagement/passwordManage.html";
+}
 
-
+function registeredOrg() {
+  window.location.href =
+    "../RegisteredOrganizations/registeredOrganizations.html";
+}

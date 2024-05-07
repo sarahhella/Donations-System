@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registered orgs</title>
+    <link rel="stylesheet" href="registeredOrganizations.css" />
+    <script src="../../../Components/NavBar/navBar.js"></script>
+    <script src="registeredOrganizations.js" type="module"></script>
+  </head>
+  <body>
+    <main-header></main-header>
+    <div class="regContainer1">
+      <div class="regHeaderContainer">
+        <p class="headerTextSize boldText purpleText">
+          Registered Organizations
+        </p>
+        <input
+          id="searchbar"
+          onkeyup="search_animal()"
+          type="text"
+          name="search"
+          placeholder="Search organizations.."
+        />
+      </div>
+      <div id="organizationsRequests"></div>
+    </div>
+  </body>
+</html>

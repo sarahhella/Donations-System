@@ -1,0 +1,36 @@
+@import url("../../../styles.css");
+@import url("../../../Components/NavBar/navBar.css");
+@import url("../OrganizationRequests/organizationRequests.css");
+
+.regContainer1 {
+  display: flex;
+  flex-direction: column;
+  margin: 64px;
+}
+.regContainerSmall {
+  padding: 20px 20px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #f7f7f7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 7px;
+}
+.regHeaderContainer {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 32px;
+}
+.headerText {
+  font-size: 20px;
+}
+
+#searchbar {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  box-sizing: border-box;
+}
