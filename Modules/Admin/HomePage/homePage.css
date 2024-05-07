@@ -1,0 +1,20 @@
+@import url("../../../styles.css");
+@import url("../../../Components/NavBar/navBar.css");
+
+.buttonBrowse {
+  width: 300px;
+  height: 300px;
+  border-radius: 7px;
+  background-color: #36119f;
+  color: white;
+  font-size: 18px;
+}
+.browseBtnsContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 150px;
+}

@@ -1,0 +1,15 @@
+@import url("../../styles.css");
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.backcontainter {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 16 px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hope Organization - Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js" defer></script>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="backcontainer">
+        <!-- <button onClick= "navigateToIndex()" class="iconButton">
+          <img
+            src="../../../Assets/Icons/logout.png"
+            alt="logOutIcon"
+            width="22px"
+            height="22px"
+          />
+        </button> -->
+
+        <img
+          src="../../Assets/Images/LogoBig.jpg"
+          alt="Hope Logo"
+          width="300"
+          height="100"
+        />
+      </div>
+      <div>
+        <form class="loginForm" onsubmit="return validateLogin()">
+          <div>
+            <div class="flexColumn">
+              <p class="boldText">Username</p>
+              <input
+                class="inputBig"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+              />
+            </div>
+
+            <div class="flexColumn">
+              <p class="boldText">Password</p>
+              <input
+                class="inputBig"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+              />
+            </div>
+          </div>
+
+          <input class="buttonMedium" type="submit" value="login" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

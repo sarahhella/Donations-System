@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hope Organization - Homepage</title>
+    <link rel="stylesheet" href="homePage.css" />
+    <script src="../../../Components/NavBar/navBar.js"></script>
+    <script src="homePage.js"></script>
+  </head>
+
+  <body>
+    <main-header></main-header>
+    <div class="browseBtnsContainer">
+      <button onclick="navigateToOrganizations()" class="buttonBrowse boldText">
+        <img
+          src="../../../Assets/Icons/organization.png"
+          alt="orgIcon"
+          width="70px"
+          height="70px"
+        />
+        <p>Organizations Requests</p>
+      </button>
+
+      <button onclick="navigateToDonors()" class="buttonBrowse boldText">
+        <img
+          src="../../../Assets/Icons/donors.png"
+          alt="donorIcon"
+          width="70px"
+          height="70px"
+        />
+        <p>Donors Requests</p>
+      </button>
+    </div>
+  </body>
+</html>
