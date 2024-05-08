@@ -37,7 +37,7 @@ customElements.define("main-header", Header);
 
 function logOutIcon() {
   window.location.href = "../../../index.html";
-  localStorage.clear();
+  // localStorage.clear();
 }
 
 function changePass() {

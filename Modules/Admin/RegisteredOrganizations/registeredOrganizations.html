@@ -9,16 +9,28 @@
   <body>
     <main-header></main-header>
     <div class="regContainer1">
+      <p class="headerTextSize boldText purpleText">Registered Organizations</p>
       <div class="regHeaderContainer">
-        <p class="headerTextSize boldText purpleText">
-          Registered Organizations
-        </p>
-        <input
-          id="searchbar"
-          type="text"
-          name="search"
-          placeholder="Search organizations.."
-        />
+        <div class="regHeaderContainer2">
+          <button class="categoryButtonClicked">
+            <p class="boldText">All</p>
+          </button>
+          <button class="categoryButtonUnclicked">
+            <p class="boldText">Health</p>
+          </button>
+          <button class="categoryButtonUnclicked">
+            <p class="boldText">Education</p>
+          </button>
+          <button class="categoryButtonUnclicked">
+            <p class="boldText">Poverty</p>
+          </button>
+          <input
+            id="searchbar"
+            type="text"
+            name="search"
+            placeholder="Search organizations.."
+          />
+        </div>
       </div>
       <div id="organizationsRequests"></div>
     </div>

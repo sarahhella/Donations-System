@@ -26,7 +26,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.loginGap{
   gap: 32px;
+}
+.loginMargin{
   margin-bottom: 32px;
 }
 .container2 {
@@ -53,7 +57,7 @@ body {
   color: white;
 }
 .buttonMedium {
-  width: 300px;
+  width: 307px;
   height: 50px;
   border-radius: 7px;
   background-color: #36119f;

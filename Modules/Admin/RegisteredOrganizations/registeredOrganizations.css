@@ -23,14 +23,36 @@
   align-items: baseline;
   margin-bottom: 32px;
 }
+.regHeaderContainer2 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 .headerText {
   font-size: 20px;
+}
+
+.categoryButtonUnclicked {
+  width: 150px;
+  height: 50px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  border-color: #e4e4e4;
+  color: black;
+}
+.categoryButtonClicked {
+  width: 150px;
+  height: 50px;
+  border-radius: 7px;
+  background-color: #36119f;
+  color: white;
 }
 
 #searchbar {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
+  height: 50px;
   width: 400px;
   box-sizing: border-box;
 }

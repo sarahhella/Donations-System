@@ -1,0 +1,32 @@
+@import url("../../../styles.css");
+@import url("../../../Components/NavBar/navBar.css");
+
+.organizationContainer1 {
+    display: flex;
+    flex-direction: column;
+    margin: 64px;
+  }
+  .organizationContainerSmall {
+    padding: 20px 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #f7f7f7;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 7px;
+  }
+  .headerText {
+    font-size: 20px;
+  }
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .documentsButton {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+    align-items: center;
+  }
+  

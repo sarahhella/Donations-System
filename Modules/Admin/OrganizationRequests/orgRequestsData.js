@@ -1,7 +1,7 @@
 export const orgRequestsData = [
     {
       organizationName: "El Gouna Hospital",
-      organizationType: "Hospital",
+      organizationType: "Health",
       contactNumber: "+20 65 3562222",
       Address: "El Gouna, Hurghada, Red Sea Governorate",
       Area: "El Gouna",
@@ -11,7 +11,7 @@ export const orgRequestsData = [
     },
     {
       organizationName: "Cairo Public Library",
-      organizationType: "Library",
+      organizationType: "Education",
       contactNumber: "+20 2 27950043",
       Address: "Al Tahrir Square, Abdeen, Cairo Governorate",
       Area: "Downtown Cairo",
@@ -21,7 +21,7 @@ export const orgRequestsData = [
     },
     {
       organizationName: "Egyptian Red Crescent Society",
-      organizationType: "Nonprofit",
+      organizationType: " Health",
       contactNumber: "+20 2 33370399",
       Address: "12 Mohamed Helmy St., Heliopolis, Cairo Governorate",
       Area: "Heliopolis",
