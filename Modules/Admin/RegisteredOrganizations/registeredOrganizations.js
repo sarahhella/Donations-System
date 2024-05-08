@@ -28,18 +28,39 @@ document.addEventListener("DOMContentLoaded", function () {
     )
     .join("");
   organizationContainer.innerHTML = html;
+
+  // Attach event listener to search bar input
+  const searchBar = document.getElementById("searchbar");
+  searchBar.addEventListener("keyup", search);
 });
 
-// function search_animal() {
-//   let input = document.getElementById("searchbar").value;
-//   input = input.toLowerCase();
-//   let x = document.getElementsByClassName("animals");
+function search() {
+  let input = document.getElementById("searchbar").value.toLowerCase(); // Get the input value and convert to lowercase
+  console.log('search input', input);
+  const acceptedOrganizations = JSON.parse(localStorage.getItem("acceptedOrganizations")) || [];
+  const organizationContainer = document.getElementById("organizationsRequests");
 
-//   for (i = 0; i < x.length; i++) {
-//     if (!x[i].innerHTML.toLowerCase().includes(input)) {
-//       x[i].style.display = "none";
-//     } else {
-//       x[i].style.display = "list-item";
-//     }
-//   }
-// }
+  const filteredOrganizations = acceptedOrganizations.filter(organization => {
+    return organization.organizationName.toLowerCase().includes(input); // Check if organization name includes the input value
+  });
+
+  const html = filteredOrganizations
+    .map(
+      (organization, index) => `
+        <div class="organizationContainerSmall">
+            <div>
+                <p class="boldText yellowText headerText">${organization.organizationName} (${organization.organizationType})</p>
+                <p class="purpleText boldText">${organization.contactNumber}</p>
+                <p class="purpleText boldText">${organization.Address}</p>
+            </div>
+            <div class="buttonsContainer">
+              <a href="../../../Assets/Files/dummyPdf.pdf" download="Organization submission"></a>
+            </div>
+        </div>
+      `
+    )
+    .join("");
+
+  organizationContainer.innerHTML = html;
+}
+
