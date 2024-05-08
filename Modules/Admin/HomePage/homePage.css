@@ -8,6 +8,7 @@
   background-color: #36119f;
   color: white;
   font-size: 18px;
+  cursor: pointer;
 }
 .browseBtnsContainer {
   width: 100vw;

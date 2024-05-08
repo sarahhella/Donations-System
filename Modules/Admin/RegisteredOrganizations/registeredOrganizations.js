@@ -1,3 +1,5 @@
+import { organizationGovernorates } from "./organizationGovernorates";
+
 document.addEventListener("DOMContentLoaded", function () {
   const acceptedOrganizations =
     JSON.parse(localStorage.getItem("acceptedOrganizations")) || [];
@@ -32,15 +34,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach event listener to search bar input
   const searchBar = document.getElementById("searchbar");
   searchBar.addEventListener("keyup", search);
+
+  const dropdownButton = document.getElementsByClassName("dropbtn");
+  dropdownButton.addEventListener("onclick", toggleDropdown);
+
+  //filter
+  // Populate the dropdown with governorates
+  const governoratesList = document.getElementById("governorates-list");
+
+  organizationGovernorates.forEach((governorate) => {
+    const checkboxContainer = document.createElement("div");
+    checkboxContainer.classList.add("checkbox-container");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = governorate;
+    checkbox.id = governorate.toLowerCase(); // Use lowercase governorate name as id
+
+    const label = document.createElement("label");
+    label.setAttribute("for", governorate.toLowerCase());
+    label.textContent = governorate;
+
+    checkboxContainer.appendChild(checkbox);
+    checkboxContainer.appendChild(label);
+    governoratesList.appendChild(checkboxContainer);
+  });
 });
 
 function search() {
   let input = document.getElementById("searchbar").value.toLowerCase(); // Get the input value and convert to lowercase
-  console.log('search input', input);
-  const acceptedOrganizations = JSON.parse(localStorage.getItem("acceptedOrganizations")) || [];
-  const organizationContainer = document.getElementById("organizationsRequests");
+  console.log("search input", input);
+  const acceptedOrganizations =
+    JSON.parse(localStorage.getItem("acceptedOrganizations")) || [];
+  const organizationContainer = document.getElementById(
+    "organizationsRequests"
+  );
 
-  const filteredOrganizations = acceptedOrganizations.filter(organization => {
+  const filteredOrganizations = acceptedOrganizations.filter((organization) => {
     return organization.organizationName.toLowerCase().includes(input); // Check if organization name includes the input value
   });
 
@@ -64,3 +94,7 @@ function search() {
   organizationContainer.innerHTML = html;
 }
 
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("governorates-list");
+  dropdownContent.classList.toggle("show");
+}

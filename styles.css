@@ -20,17 +20,17 @@ body {
 } */
 
 .container1 {
-  width: 100vw; /* full width of the viewport */
-  height: 100vh; /* full height of the viewport */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.loginGap{
+.loginGap {
   gap: 32px;
 }
-.loginMargin{
+.loginMargin {
   margin-bottom: 32px;
 }
 .container2 {
@@ -48,6 +48,7 @@ body {
   height: 50px;
   border-radius: 7px;
   background-color: #e4e4e4;
+  cursor: pointer;
 }
 .buttonSmall {
   width: 100px;
@@ -55,13 +56,15 @@ body {
   border-radius: 7px;
   background-color: #36119f;
   color: white;
+  cursor: pointer;
 }
 .buttonMedium {
   width: 307px;
   height: 50px;
   border-radius: 7px;
   background-color: #36119f;
-  color: white;
+  color: white;  
+  cursor: pointer;
 }
 .buttonGreen {
   background-color: #10971e !important;
@@ -92,6 +95,7 @@ body {
   background-color: #36119f;
   color: white;
   padding: 16px;
+  cursor: pointer;
 }
 .iconButton {
   width: 50px;
@@ -99,6 +103,7 @@ body {
   border-radius: 7px;
   background-color: #36119f;
   color: white;
+  cursor: pointer;
 }
 
 .backButton {
@@ -106,6 +111,7 @@ body {
   height: 50px;
   border-radius: 7px;
   background-color: #36119f;
+  cursor: pointer;
 }
 .yellowText {
   color: #cda508;

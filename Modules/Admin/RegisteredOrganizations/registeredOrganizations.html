@@ -9,27 +9,42 @@
   <body>
     <main-header></main-header>
     <div class="regContainer1">
-      <p class="headerTextSize boldText purpleText">Registered Organizations</p>
       <div class="regHeaderContainer">
+        <p class="headerTextSize boldText purpleText">
+          Registered Organizations
+        </p>
         <div class="regHeaderContainer2">
-          <button class="categoryButtonClicked">
-            <p class="boldText">All</p>
-          </button>
-          <button class="categoryButtonUnclicked">
-            <p class="boldText">Health</p>
-          </button>
-          <button class="categoryButtonUnclicked">
-            <p class="boldText">Education</p>
-          </button>
-          <button class="categoryButtonUnclicked">
-            <p class="boldText">Poverty</p>
-          </button>
           <input
             id="searchbar"
             type="text"
             name="search"
             placeholder="Search organizations.."
           />
+          <button onCLick="filter()" class="iconButton">
+            <img
+              src="../../../Assets/Icons/filter.png"
+              alt="logOutIcon"
+              width="24px"
+              height="px"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="filterContainer">
+        <div class="subContainer">
+          <p class="boldText">Organization Type</p>
+        </div>
+        <div class="subContainer">
+          <p class="boldText">Organization Area</p>
+        </div>
+        <div class="subContainer">
+          <p class="boldText">Organization Government</p>
+          <div class="dropdown">
+            <button class="dropbtn">Select Governorates</button>
+            <div class="dropdown-content" id="governorates-list">
+              <!-- Governorates will be populated dynamically -->
+            </div>
+          </div>          
         </div>
       </div>
       <div id="organizationsRequests"></div>
