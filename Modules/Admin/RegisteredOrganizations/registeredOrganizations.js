@@ -2,8 +2,9 @@ import { organizationGovernorates } from "./organizationGovernorates.js";
 import { organizationTypes } from "./organizationTypes.js";
 import { organizationAreas } from "./organizationAreas.js";
 
+let acceptedOrganizations = [];
 document.addEventListener("DOMContentLoaded", function () {
-  const acceptedOrganizations =
+  acceptedOrganizations =
     JSON.parse(localStorage.getItem("acceptedOrganizations")) || [];
 
   console.log("Registered Organizations:", acceptedOrganizations);
@@ -39,18 +40,21 @@ document.addEventListener("DOMContentLoaded", function () {
   searchBar.addEventListener("keyup", search);
 
   // Attach event listeners to filter checkboxes
-  const filterCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-  filterCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", applyFilters);
+  const filterContainer = document.querySelector('.AllFiltersContainer');
+  filterContainer.addEventListener('change', function (event) {
+    if (event.target.matches('input[type="checkbox"]')) {
+      applyFilters();
+    }
   });
 
   //Governorate filter
   const filterContainerGovernorate = document.querySelector('.filterContainerGovernorate');
   const html2 = organizationGovernorates.map(
-    (governorate, index) => `
+    (governorate, index) => 
+    `
     <li>
     <label>
-      <input type="checkbox" value=${governorate} name="governorate" />${governorate}</label>
+      <input type="checkbox" value="${governorate}" name="governorate" />${governorate}</label>
     </li>
     `
   ).join("");
@@ -62,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (area, index) => `
         <li>
         <label>
-          <input type="checkbox" value=${area} name="area" />${area}</label>
+          <input type="checkbox" value="${area}" name="area" />${area}</label>
         </li>
         `
   ).join("");
@@ -74,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (type, index) => `
       <li>
       <label>
-        <input type="checkbox" value=${type} name="type" />${type}</label>
+        <input type="checkbox" value="${type}" name="type" />${type}</label>
       </li>
       `
   ).join("");
@@ -82,20 +86,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function applyFilters() {
+  console.log('Applying Filters');
   const selectedGovernorates = getSelectedValues("governorate");
   const selectedAreas = getSelectedValues("area");
   const selectedTypes = getSelectedValues("type");
+  console.log('selectedGovernorates', selectedGovernorates);
+  console.log('selectedAreas', selectedAreas);
+  console.log('selectedTypes', selectedTypes);
+
+  // Check if any filter is selected
+  if (selectedGovernorates.length === 0 && selectedAreas.length === 0 && selectedTypes.length === 0) {
+    displayOrganizations(acceptedOrganizations); // Display all organizations
+    return;
+  }
 
   const filteredOrganizations = acceptedOrganizations.filter(organization => {
-    return (
-      selectedGovernorates.includes(organization.governorate) &&
-      selectedAreas.includes(organization.area) &&
-      selectedTypes.includes(organization.type)
-    );
+    console.log('Organization Governorate:', organization.Government);
+    console.log('Organization Area:', organization.Area);
+    console.log('Organization Type:', organization.organizationType);
+
+    const matchesGovernorate = selectedGovernorates.length === 0 || selectedGovernorates.includes(organization.Government);
+    const matchesArea = selectedAreas.length === 0 || selectedAreas.includes(organization.Area);
+    const matchesType = selectedTypes.length === 0 || selectedTypes.includes(organization.organizationType);
+
+    return matchesGovernorate && matchesArea && matchesType;
   });
+
+  console.log('Filtered Organizations:', filteredOrganizations);
 
   displayOrganizations(filteredOrganizations);
 }
+
+
+
 
 function getSelectedValues(filterName) {
   const checkboxes = document.querySelectorAll(`input[name="${filterName}"]:checked`);

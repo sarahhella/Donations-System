@@ -20,36 +20,29 @@
             name="search"
             placeholder="Search organizations.."
           />
-          <button onCLick="filter()" class="iconButton">
-            <img
-              src="../../../Assets/Icons/filter.png"
-              alt="logOutIcon"
-              width="24px"
-              height="px"
-            />
-          </button>
+        </div>
+        <div class="AllFiltersContainer">
+          <div class="checkbox-dropdown">
+            <p class="boldText whiteText">Governorate</p>
+            <ul class="checkbox-dropdown-list">
+              <div class="filterContainerGovernorate"></div>
+            </ul>
+          </div>
+          <div class="checkbox-dropdown">
+            <p class="boldText whiteText">Area</p>
+            <ul class="checkbox-dropdown-list">
+              <div class="filterContainerArea"></div>
+            </ul>
+          </div>
+          <div class="checkbox-dropdown">
+            <p class="boldText whiteText">Type</p>
+            <ul class="checkbox-dropdown-list">
+              <div class="filterContainerType"></div>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="AllFiltersContainer">
-        <div class="checkbox-dropdown">
-          <p class="boldText whiteText">Governorate</p>
-          <ul class="checkbox-dropdown-list">
-            <div class="filterContainerGovernorate"></div>
-          </ul>
-        </div>
-        <div class="checkbox-dropdown">
-          <p class="boldText whiteText">Area</p>
-          <ul class="checkbox-dropdown-list">
-            <div class="filterContainerArea"></div>
-          </ul>
-        </div>
-        <div class="checkbox-dropdown">
-          <p class="boldText whiteText">Type</p>
-          <ul class="checkbox-dropdown-list">
-            <div class="filterContainerType"></div>
-          </ul>
-        </div>
-      </div>
+
 
       <div id="organizationsRequests"></div>
     </div>
