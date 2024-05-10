@@ -119,6 +119,9 @@ body {
 .purpleText {
   color: #36119f;
 }
+.whiteText{
+  color: white;
+}
 .headerTextSize {
   font-size: 28px;
 }

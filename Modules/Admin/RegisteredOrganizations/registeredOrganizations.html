@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>registered orgs</title>
+    <title>Hope Organization - registered organizations</title>
     <link rel="stylesheet" href="registeredOrganizations.css" />
   </head>
   <body>
@@ -30,27 +30,32 @@
           </button>
         </div>
       </div>
-      <div class="filterContainer">
-        <div class="subContainer">
-          <p class="boldText">Organization Type</p>
+      <div class="AllFiltersContainer">
+        <div class="checkbox-dropdown">
+          <p class="boldText whiteText">Governorate</p>
+          <ul class="checkbox-dropdown-list">
+            <div class="filterContainerGovernorate"></div>
+          </ul>
         </div>
-        <div class="subContainer">
-          <p class="boldText">Organization Area</p>
+        <div class="checkbox-dropdown">
+          <p class="boldText whiteText">Area</p>
+          <ul class="checkbox-dropdown-list">
+            <div class="filterContainerArea"></div>
+          </ul>
         </div>
-        <div class="subContainer">
-          <p class="boldText">Organization Government</p>
-          <div class="dropdown">
-            <button class="dropbtn">Select Governorates</button>
-            <div class="dropdown-content" id="governorates-list">
-              <!-- Governorates will be populated dynamically -->
-            </div>
-          </div>          
+        <div class="checkbox-dropdown">
+          <p class="boldText whiteText">Type</p>
+          <ul class="checkbox-dropdown-list">
+            <div class="filterContainerType"></div>
+          </ul>
         </div>
       </div>
+
       <div id="organizationsRequests"></div>
     </div>
 
     <script src="../../../Components/NavBar/navBar.js"></script>
     <script src="registeredOrganizations.js" type="module" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
