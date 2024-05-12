@@ -19,3 +19,7 @@ Additionally, I implemented functionalities for viewing registered organizations
 #### UI Design:
 Explore my UI design for the admin persona on Figma: [Admin Persona UI Design](https://www.figma.com/file/wDleU9O9ITiKgeE1nr1avM/SE?type=design&node-id=0%3A1&mode=design&t=4kISjKyHBoY8U4vs-1)
 
+**Note**: To access the website, use the following login credentials:
+- Username: admin
+- Password: admin
+
